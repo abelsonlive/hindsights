@@ -39,7 +39,7 @@ python fb.py
 This will generate a stable access token and insert it into `config.yml`
 
 ## CRON
-Now just set `hindsights.py` on a cron and your done!
+Now just set `hindsights.py` on a cron and you're done!
 ```
-00,10,20,30,40,50 * * * * cd <hindsights directory> && python hindsights.py 
+00,10,20,30,40,50 * * * * cd <hindsights directory>/ && python hindsights.py 
 ```
