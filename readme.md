@@ -1,10 +1,21 @@
 hindsights
 ==========
 A simple, lightweight tracker for facebook insights data. 
-`hindsights` polls the [facebook graph api](https://developers.facebook.com/docs/reference/api/) every ten minutes and returns highly comprehensive information about facebook activity on your page
+`hindsights` polls the [facebook graph api](https://developers.facebook.com/docs/reference/api/) every ten minutes and returns highly comprehensive information about facebook activity on your page(s).
+
+
+# INSTALLATION
 
 ## Dependencies:
-`hindsights` runs off of `boto`, `facepy`, and `requests`.  You'll need the development version of `facepy`, installed as follows:
+`hindsights` runs off of `boto`, `pyyaml`, and `requests`.  
+These are installed as follows:
+```
+pip install boto
+pip install pyyaml
+pip install requests
+```
+
+You'll also need the development version of `facepy`, installed as follows:
 ```
 git clone https://github.com/jgorset/facepy.git
 cd facepy
@@ -29,11 +40,26 @@ fb_page_ids: [    # A list of facebook pages you have insights access to
 fb_temp_access_token: ZZZZZZZZZZZZZZZZZZZZZZ # A TEMPORARY FB ACCESS TOKEN WITH READ INSIGHTS PRIVELEGES (from: https://developers.facebook.com/tools/explorer/)
 s3_bucket: my-cool-bucket # a s3 bucket you've created to deposit data into
 time_zone: America/New_York # Your time zone (should be the one that you post facebook messages in)
-short_url: .*nyti\.ms.* # OPTIONAL: A regex to match a custom domain shortener (the app tries to unshorten most typical shorterning services)
+short_url: .*nyti\.ms.* # OPTIONAL: A regex to match a custom domain shortener 
+                        # (the app tries to unshorten most typical shorterning services, 
+                        #   but won't know about your special one)
 limit: 200 # How many posts do you want to track at a time?
 ```
-
-After you've generated this config file (remember it must be called `config.yml` and in the project's root directory), run this script:
+Here's a blank one for your convenience:
+```
+fb_page_ids: []
+fb_app_id: 
+fb_app_secret: 
+fb_temp_access_token:
+aws_access_key_id: 
+aws_secret_access_key:
+s3_bucket: 
+time_zone: 
+short_url:
+limit:
+```
+After you've generated this config file (remember it must be called `config.yml` and in the project's root directory), 
+run this script:
 ```
 python fb.py
 ```
