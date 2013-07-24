@@ -1,6 +1,7 @@
 hindsights
 ==========
-A simple, lightweight tracker for facebook insights data.
+A simple, lightweight tracker for facebook insights data. 
+`hindsights` polls the [facebook graph api](https://developers.facebook.com/docs/reference/api/) every ten minutes and returns highly comprehensive information about facebook activity on your page
 
 ## Dependencies:
 `hindsights` runs off of `boto`, `facepy`, and `requests`.  You'll need the development version of `facepy`, installed as follows:
