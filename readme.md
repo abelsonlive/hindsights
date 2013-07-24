@@ -1,3 +1,39 @@
+```
+
+             _,addba,
+         _,adP"'\  "Y,                       _____
+       ,P"  d"Y,  \  8                  ,adP"""""""Yba,_
+     ,d" /,d' `Yb, ,P'              ,adP"'           `""Yba,
+     d'   d'    `"""         _,aadP"""""""Ya,             `"Ya,_
+     8  | 8              _,adP"'                              `"Ya,
+     8    I,           ,dP"           __              "baa,       "Yb,
+     I,   Ya         ,db___           `"Yb,      a       `"         `"b,
+     `Y, \ Y,      ,d8888888baa8a,_      `"      `"b,                 `"b,
+      `Ya, `b,    d8888888888888888b,               "ba,                `8,
+        "Ya,`b  ,d8888888888888888888,   d,           `"Ya,_             `Y,
+          `Ybd8d8888888888888888888888b, `"Ya,            `""Yba,         `8,
+             "Y8888888888888888888888888,   `Yb,               `"Ya        `b
+              d8888888888888888888888888b,    `"'            ,    "b,       8,
+              888888888888888888888888888b,                  b      "b      `b
+              8888888888888888888888888888b    b,_           8       "       8
+              I8888888888888888888888888888,    `"Yb,_       `b,             8
+               Y888888888888888888888888888I        `Yb,       8,            8
+                `Y8888888888888888888888888(          `8,       "b     a    ,P
+                  "8888""Y88888888888888888I           `b,       `b    8    d'
+                    "Y8b,  "Y888PPY8888888P'            `8,       P    8    8
+                        `b   "'  __ `"Y88P'    b,        `Y       "    8    8
+                       ""|      =""Y'   d'     `b,                     8    8
+                        /         "' |  I       b             ,       ,P   ,P
+                       (          _,"  d'       Y,           ,P       "    d'
+                        |              I        `b,          d'            8
+                        |              I          "         d,d'           8
+                        |          ;   `b                  dP"          __,8_
+                        |          |    `b                d"     _,,add8888888
+                        ",       ,"      `b              d' _,ad88888888888888
+                          \,__,a"          ",          _,add888888888888888888
+                         _,aa888b           I       ,ad88888888888888888888888
+                     _,ad88888888a___,,,gggd8,   ,ad88888888888888888888888888
+```
 hindsights
 ==========
 A simple, lightweight tracker for facebook insights data. 
@@ -67,6 +103,8 @@ This will generate a stable access token and insert it into `config.yml`
 
 ## CRON
 Now just set `hindsights.py` on a cron and you're done!
+Make sure to navigate to the `hindsights` directory or it won;t be able to find
+`config.yml`
 ```
-00,10,20,30,40,50 * * * * cd <hindsights directory>/ && python hindsights.py 
+00,10,20,30,40,50 * * * * cd <path/to/hindsights/dir/> && python hindsights.py 
 ```
