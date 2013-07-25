@@ -107,9 +107,11 @@ Make sure to navigate to the `hindsights` directory or it won't be able to find
 00,10,20,30,40,50 * * * * cd <path/to/hindsights/dir/> && python hindsights.py 
 ```
 Your data will be deposited on s3 in this format:
-`hindsigts/<page_id>/<year>/<month>/<day>/<unix_time>.json`
+```
+hindsigts/<page_id>/<year>/<month>/<day>/<unix_time>.json
+```
 
-## Sample datum:
+## sample datum:
 ```
 {"comment": 32, "post_impressions_paid_unique": 0, "post_impressions_paid": 0, "page_likes": 3284819, 
 "post_consumptions": 1415, "short_url": "__________________", "post_impressions_viral_unique": 922, 
