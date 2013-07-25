@@ -34,7 +34,7 @@
 hindsights
 ==========
 A simple, lightweight tracker for facebook insights data. 
-`hindsights` polls the [facebook graph api](https://developers.facebook.com/docs/reference/api/) every ten minutes and returns highly comprehensive information about facebook activity on your page(s).
+`hindsights` polls the [facebook graph api](https://developers.facebook.com/docs/reference/api/) every ten minutes and dumps highly comprehensive information about facebook activity on your page(s) to s3.
 
 
 # INSTALLATION
@@ -110,17 +110,16 @@ Make sure to navigate to the `hindsights` directory or it won;t be able to find
 ## Sample data:
 ```
 {"comment": 32, "post_impressions_paid_unique": 0, "post_impressions_paid": 0, "page_likes": 3284819, 
-"post_consumptions": 1415, "short_url": "http://nyti.ms/19ZxxhY", "post_impressions_viral_unique": 922, 
+"post_consumptions": 1415, "short_url": "__________________", "post_impressions_viral_unique": 922, 
 "share": 45, "datetime": "2013-07-05 16:19:19", "post_negative_feedback": 90, "post_impressions_fan_unique": 88704, 
-"year": 2013, "other clicks": 565, "message": "What is a sonker exactly? The Times\u2019 Kim Severson unravels the 
-riddle of this soupy baked fruit dessert.", "link clicks": 850, "xbutton": 47, "post_impressions_unique": 96736, 
-"post_impressions_organic_unique": 95744, "post_negative_feedback_unique": 47, "other": 1794, "report_spam_clicks": 1, 
-"post_impressions": 260893, "post_impressions_fan_paid": 0, "page_id": "nytimes", "status_type": "shared_story", 
-"hide_clicks": 36, "unlike_page_clicks": 3, "timestamp": "1373055559", "post_impressions_fan_paid_unique": 0, 
-"post_impressions_fan": 249489, "post_consumptions_unique": 1171, "post_id": "5281959998_10150317884979999", 
-"post_engaged_users": 1291, "link": 36, "post_impressions_viral": 1898, "wkdy": 4, "month": 7, "post_story_adds": 257, 
-"day": 5, "minute": 19, "post_impressions_organic": 258995, "like": 180, "hour": 16, 
-"url": "http://www.nytimes.com/2013/07/03/dining/in-search-of-the-sonker-a-sweet-denizen-of-surry-county-nc.html", 
-"type": "link", "page_talking_about": 105178, "wknd": 0, "post_stories": 257, "post_story_adds_unique": 226, "fan": 56, 
-"post_storytellers": 226, "hide_all_clicks": 3}
+"year": 2013, "other clicks": 565, "message": "____________________________________.", "link clicks": 850, 
+"xbutton": 47, "post_impressions_unique": 96736, "post_impressions_organic_unique": 95744, 
+"post_negative_feedback_unique": 47, "other": 1794, "report_spam_clicks": 1, "post_impressions": 260893, 
+"post_impressions_fan_paid": 0, "page_id": "_______", "status_type": "shared_story", "hide_clicks": 36, 
+"unlike_page_clicks": 3, "timestamp": "1373055559", "post_impressions_fan_paid_unique": 0, 
+"post_impressions_fan": 249489, "post_consumptions_unique": 1171, "post_id": "______________________", 
+"post_engaged_users": 1291, "link": 36, "post_impressions_viral": 1898, "wkdy": 4, "month": 7, 
+"post_story_adds": 257, "day": 5, "minute": 19, "post_impressions_organic": 258995, "like": 180, "hour": 16, 
+"url": "___________________", "type": "link", "page_talking_about": 105178, "wknd": 0, "post_stories": 257, 
+"post_story_adds_unique": 226, "fan": 56, "post_storytellers": 226, "hide_all_clicks": 3}
 ```
