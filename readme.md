@@ -40,12 +40,13 @@ A simple, lightweight tracker for facebook insights data.
 # INSTALLATION
 
 ## Dependencies:
-`hindsights` runs off of `boto`, `pyyaml`, and `requests`.  
+`hindsights` runs off of `boto`, `pyyaml`, `pytz`, and `requests`.  
 These are installed as follows:
 ```
 pip install boto
 pip install pyyaml
 pip install requests
+pip install pytz
 ```
 
 You'll also need the development version of `facepy`, installed as follows:
