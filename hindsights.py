@@ -31,14 +31,14 @@ def clean_datetime(date_string):
 def get_fb_link(post_data, unshorten):
   if post_data.has_key('link'):
     if unshorten :
-      return clean_url(unshorten_link(post_data['link']))
+      return unshorten_link(post_data['link'])
     else:
-      return clean_url(post_data['link'])
+      return post_data['link']
   elif post_data.has_key('source'):
     if unshorten :
-      return clean_url(unshorten_link(post_data['source']))
+      return unshorten_link(post_data['source'])
     else:
-      return clean_url(post_data['source'])
+      return post_data['source']
   else:
     return None
 
@@ -100,7 +100,7 @@ def get_new_data_for_page(page_id):
         short_url = get_fb_link(post, unshorten=False)
         if url is None or is_facebook(url):
           if message is not None:
-            url = clean_url(unshorten_link(extract_url(message)))
+            url = extract_url(message)
 
         # safely return post data
         post = {
