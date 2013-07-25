@@ -49,7 +49,7 @@ def generate_extended_access_token(conf="config.yml"):
         f.write(yaml.dump(c))
     print "HERE IS YOUR STABLE ACCESS TOKEN: %s" % token
     print "IT EXPIRES AT %s" % expires_at
-    print "YOU CONFIG FILE (%s) HAS BEEN UPDATED" % conf
+    print "YOUR CONFIG FILE (%s) HAS BEEN UPDATED" % conf
 
 def connect(conf="config.yml"):
     c = yaml.safe_load(open(conf))
