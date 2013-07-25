@@ -37,9 +37,9 @@ A simple, lightweight tracker for facebook insights data.
 `hindsights` polls the [facebook graph api](https://developers.facebook.com/docs/reference/api/) every ten minutes and dumps highly comprehensive information about facebook activity on your page(s) to s3.
 
 
-# INSTALLATION
+# installation
 
-## Dependencies:
+## dependencies:
 `hindsights` runs off of `boto`, `pyyaml`, `pytz`, and `requests`.  
 These are installed as follows:
 ```
@@ -58,7 +58,7 @@ sudo rm -r facepy
 cd ..
 ```
 
-## Configuration - `config.yml`
+## configuration - `config.yml`
 `hindsights` works off of a config file that MUST BE NAMED `config.yml` and in the project's root directory
 
 `config.yml` looks like this:
@@ -99,15 +99,15 @@ python fb.py
 ```
 This will generate a stable access token and insert it into `config.yml`
 
-## CRON
+## crontab
 Now just set `hindsights.py` on a cron and you're done!
-Make sure to navigate to the `hindsights` directory or it won;t be able to find
+Make sure to navigate to the `hindsights` directory or it won't be able to find
 `config.yml`
 ```
 00,10,20,30,40,50 * * * * cd <path/to/hindsights/dir/> && python hindsights.py 
 ```
 
-## Sample data:
+## Sample datum:
 ```
 {"comment": 32, "post_impressions_paid_unique": 0, "post_impressions_paid": 0, "page_likes": 3284819, 
 "post_consumptions": 1415, "short_url": "__________________", "post_impressions_viral_unique": 922, 
