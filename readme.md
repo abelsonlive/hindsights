@@ -108,7 +108,7 @@ Make sure to navigate to the `hindsights` directory or it won't be able to find
 ```
 Your data will be deposited on s3 in this format:
 ```
-hindsigts/<page_id>/<year>/<month>/<day>/<unix_time>.json
+s3://<s3_bucket>/hindsights/<page_id>/<year>/<month>/<day>/<unix_time>.json
 ```
 
 ## sample datum:
