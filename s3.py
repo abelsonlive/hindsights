@@ -3,7 +3,6 @@
 import os
 import boto
 import boto.s3
-from boto.s3 import S3Connection
 from boto.s3.key import Key
 import sys
 import yaml
