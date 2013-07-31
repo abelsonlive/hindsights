@@ -42,7 +42,21 @@ def upload_string(string, filepath, bucket):
 	k = Key(bucket)
 	k.key = filepath
 	print "/\ %s" % (filepath)
-	k.set_contents_from_string(string)
+  try:
+    k.set_contents_from_string(string)
+  except:
+    do_try = True
+    i = 1
+    while do_try:
+      try:
+        k.set_contents_from_string(string)
+      except:
+        sleep(choice([float(i)/100 for i in range(500,1000)]))
+        i += 1
+        if i > 10:
+          do_try = False
+      else:
+        do_try = False
 
 def download_string(filepath, do_print=True):
 	k = Key(bucket)
