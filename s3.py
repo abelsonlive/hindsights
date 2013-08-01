@@ -39,9 +39,9 @@ def connect_to_bucket(bucket_name=c['s3_bucket']):
   return find_s3_bucket(conn, bucket_name)
 
 def upload_string(string, filepath, bucket):
-	k = Key(bucket)
-	k.key = filepath
-	print "/\ %s" % (filepath)
+  k = Key(bucket)
+  k.key = filepath
+  print "/\ %s" % (filepath)
   try:
     k.set_contents_from_string(string)
   except:
