@@ -113,8 +113,10 @@ def get_new_data_for_page(page_id):
           'type': post['type'] if post.has_key('type') else None,
           'status_type': post['status_type'] if post.has_key('status_type') else None,
           'message': message,
-          'datetime': date_time.strftime(OUT_TIME_FORMAT) if date_time is not None else None,
-          'timestamp': date_time.strftime("%s") if date_time is not None else None,
+          'datetime': datetime.now().strptime(OUT_TIME_FORMAT),
+          'timestamp': datetime.now().strptime('%s')
+          'pub_datetime': date_time.strftime(OUT_TIME_FORMAT) if date_time is not None else None,
+          'pub_timestamp': date_time.strftime("%s") if date_time is not None else None,
           'year': date_time.year if date_time is not None else None,
           'month': date_time.month if date_time is not None else None,
           'wkdy': date_time.weekday() if date_time is not None else None,
